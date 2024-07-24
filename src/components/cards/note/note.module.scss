@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    width: 100%;
+    aspect-ratio: 5/4;
+    
+    padding: 15px;
+    grid-template-rows: auto 25px;
+    
+    background-color: rgb(251, 235,149, 0.4);
+    border-radius: 10px;
+
+    
+        p{
+
+            font-size: var(--fs-md);
+            font-weight: var(--fw-normal);
+            line-height: 25px;
+            color: #3c3d43;
+            
+
+        }
+
+    
+    .footer{
+        font-size: var(--fs-sm);
+        color: var(--grey);
+
+    }
+}

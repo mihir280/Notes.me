@@ -1,0 +1,37 @@
+.left{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin-left: 200px;
+    // border: 1px solid blue;
+    
+
+
+}
+
+img{
+    // width: 300px;
+
+    // aspect-ratio: 1/1;
+    height: 300px;
+    margin-bottom: 20px;
+   
+}
+div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    h1{
+        font-size: var(--fs-xxxl);
+        font-weight: var(--fw-bold);
+        line-height: 45px;
+    }
+    p{
+        font-size: var(--fs-lg);
+        color:var(--grey);
+    }
+}
+
