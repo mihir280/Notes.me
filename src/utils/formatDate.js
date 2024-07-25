@@ -1,5 +1,4 @@
-export const formatDate=(date)=>{
-    const d=new Date(date);
-    return d.toDateString();
-};
-// export default formatDate();
+export const formatDate = (date)=>{
+    const d = new Date();
+    return d.toDateString;
+}

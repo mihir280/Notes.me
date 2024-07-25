@@ -1,14 +1,8 @@
 .container{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    
-
     main{
-        gap: 30px;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
-        
+        padding-top: 40px;
+        grid-template-columns: repeat(4,1fr);
+        gap: 40px;
     }
 }

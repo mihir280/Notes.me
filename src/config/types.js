@@ -1,7 +1,7 @@
- const NOTES_DATA='notes-data';
+export const NOTES_DATA = "notes-data";
 
- const types={
-        NOTES_DATA,
- }
+const type = {
+  NOTES_DATA,
+};
 
- export default types;
+export default type;

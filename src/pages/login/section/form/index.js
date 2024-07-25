@@ -1,46 +1,21 @@
-import React ,{useState} from "react";
-
-import BrandLogo from '../../../../components/shared/brand';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from "react";
 import styles from "./form.module.scss";
 
-import Input from "../../../../components/atoms/inputs";
-import Button from "../../../../components/atoms/buttons";
+import BrandLogo from "../../../../shared/brand";
+import Signin from "../../partials/signin";
+import Signup from "../../partials/signup";
 
-
-function Form(){
-    const[email,setEmail]=useState('');
-    const[password,setPassword]=useState('');
-    const navigate=useNavigate();
-
-    return(
-        <section className={styles["form-container"]}>
-           
-            <BrandLogo />
-            <div className={styles.form}>
-               
-                <Button
-                text="Join with Google"
-                className={styles.google}
-                />
-             <div className={styles.option}>
-               <span>or join with email address</span> 
-            </div> 
-            <article className={styles.details}>
-                <Input type="text" placeholder={'Email Address'}value={email} onChange={(e)=>setEmail(e.target.value)}  />
-
-                <Input type="password" placeholder={'Password'}value={password} onChange={(e)=>setPassword(e.target.value)}  />
-                <Button
-                text="Join with Email"
-                className={styles.emailbtn}
-                handlClick={()=>navigate("/notes")}
-        
-                />
-            </article>
-            </div>
-
-        </section>
-    );
-    
+function Form() {
+  const [active, setActive] = useState("signin");
+  return (
+    <section className={styles["form-container"]}>
+      <BrandLogo />
+      {active === "signin" ? <Signin /> : <Signup handleSwitch={()=> setActive("singin")}/>}
+      {active === "signin"? <p>Not a registered user? <span onClick={()=> setActive("signup")}>Sign up now</span></p>: 
+      <p>Already a registered user? <span onClick={()=> setActive("signin")}>Sign in now</span></p>
+      }
+      
+    </section>
+  );
 }
 export default Form;
